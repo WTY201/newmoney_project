@@ -1,0 +1,30 @@
+Login:
+  login_o : ['xpath','//a[text()="登录"]']
+  phone : ['xpath','//*[@class="icon svg-icon computer"]']
+  username : ['xpath','//*[@placeholder="请输入手机号"]']
+  password : ['xpath','//*[@name="password"]']
+  login_t : ['xpath','//*[@class="el-button login-btn el-button--primary"]']
+  agreement : ['xpath','//*[@class="el-checkbox__input"]']
+  assert_login : ['xpath','//li[1]/a[@target="_self"]']
+MainPage:
+  shopping : ['class name','shopbtn']#进入商成
+  shopcart : ['xpath','//*[@class="my-cart right"]']#进入购物车
+  shop : ['xpath','//*[@title="{}"]']#选择商品
+  buynow : ['xpath','//*[@class="buy-direct c-pointer"]']#立即购买
+  add_shopcart : ['xpath','//*[@class="add-cart c-pointer"]']#加入购物车
+  clear_none_shopcart : ['id','ic-clear-cart']#清除失效商品
+  settlement : ['id','ic-go-check-trigger']#结算
+  all_shopcart : ['id','check-all-bellow']#全选购物车内容
+  clear_shopcart : ['id','ic-delete-by-ids']#删除购物车内容
+  plus : ['id','spp-count-plus']#商品数量+1
+  minus : ['id','spp-count-minus']#商品数量-1
+  submits : ['id','so-summit'] #提交订单
+  shop_name : ['class name','bluefont'] #提交订单后商品名称
+  rmb : ['xpath','//*[@value="人民币支付"]']#用人民币支付
+  dollar : ['xpath','//*[@value="美元支付"]']#用人民币支付
+  dizhi : ['xpath','//*[@class="left so-new-address-add"]']#使用新地址
+  sheng : ['xpath','//*[text()="{}"]']#省级
+  shi : ['xpath','//*[text()="{}"]']#省级
+
+delorders :
+
