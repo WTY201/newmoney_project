@@ -17,7 +17,7 @@ class LoginPage(BasePage):
         self.input_element(self.username,user)
         self.input_element(self.password,pwd)
         self.click_element(self.login_t)
-        return MainPage()
+        # return MainPage()
 
 if __name__ == '__main__':
     a = LoginPage()

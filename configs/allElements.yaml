@@ -1,4 +1,4 @@
-Login:
+LoginPage:
   login_o : ['xpath','//a[text()="登录"]']
   phone : ['xpath','//*[@class="icon svg-icon computer"]']
   username : ['xpath','//*[@placeholder="请输入手机号"]']
