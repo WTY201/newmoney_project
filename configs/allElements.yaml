@@ -16,15 +16,18 @@ MainPage:
   settlement : ['id','ic-go-check-trigger']#结算
   all_shopcart : ['id','check-all-bellow']#全选购物车内容
   clear_shopcart : ['id','ic-delete-by-ids']#删除购物车内容
+  shop_main : ['xpath' , "//*[text()='首页']"]#购物车内点首页
   plus : ['id','spp-count-plus']#商品数量+1
   minus : ['id','spp-count-minus']#商品数量-1
+  car_plus : ['xpath', '//*[@class="left scltc-add"]']#购物车+1
+  car_minus : ['xpath' , '//*[@class="left scltc-sub"]']#购物车-1
   submits : ['id','so-summit'] #提交订单
   shop_name : ['class name','bluefont'] #提交订单后商品名称
   rmb : ['xpath','//*[@value="人民币支付"]']#用人民币支付
   dollar : ['xpath','//*[@value="美元支付"]']#用人民币支付
   dizhi : ['xpath','//*[@class="left so-new-address-add"]']#使用新地址
   sheng : ['xpath','//*[text()="{}"]']#省级
-  shi : ['xpath','//*[text()="{}"]']#省级
-
 delorders :
-
+  order : ['xpath' , "//*[text()='我的订单']"]#点击我的订单
+  del_order : ['xpath','//*[@class="sahs-inner close-order"]']#关闭订单
+  del_l : ['class name','delete-order']#删除按钮
