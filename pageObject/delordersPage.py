@@ -3,7 +3,7 @@
 # @version  1.0
 #清除订单
 from common.basePage import BasePage
-class DelOrders(BasePage):
+class DelOrdersPage(BasePage):
     def del_orders(self):
         try:
             self.click_element(self.order)

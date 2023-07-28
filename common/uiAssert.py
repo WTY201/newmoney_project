@@ -3,8 +3,8 @@
 # @version  1.0
 import traceback
 import pytest
-from utlis.handle_loguru import log
-from utlis.handle_path import GetPath
+from utils.handle_loguru import log
+from utils.handle_path import GetPath
 from common_Driver import ComDiver
 
 

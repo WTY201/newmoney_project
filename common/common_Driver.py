@@ -4,7 +4,7 @@
 import traceback
 from selenium import webdriver
 from configs.env import Env
-from utlis.handle_loguru import log
+from utils.handle_loguru import log
 class Singleobj:
     _instance = None
     def __new__(cls, *args, **kwargs):

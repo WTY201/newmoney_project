@@ -4,9 +4,9 @@
 import traceback
 from common.common_Driver import ComDiver
 from configs.env import Env
-from utlis.handle_loguru import log
-from utlis.handle_yaml import get_yaml
-from utlis.handle_path import GetPath
+from utils.handle_loguru import log
+from utils.handle_yaml import get_yaml
+from utils.handle_path import GetPath
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 class BasePage:

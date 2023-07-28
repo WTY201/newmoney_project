@@ -3,7 +3,7 @@
 #写入log文件
 from configparser  import  ConfigParser
 from loguru import logger
-from utlis.handle_path import GetPath
+from utils.handle_path import GetPath
 from time import strftime
 import os
 import logging

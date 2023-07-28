@@ -1,4 +1,4 @@
-LoginPage:
+LoginPage: #登录页
   login_o : ['xpath','//a[text()="登录"]']
   phone : ['xpath','//*[@class="icon svg-icon computer"]']
   username : ['xpath','//*[@placeholder="请输入手机号"]']
@@ -6,28 +6,50 @@ LoginPage:
   login_t : ['xpath','//*[@class="el-button login-btn el-button--primary"]']
   agreement : ['xpath','//*[@class="el-checkbox__input"]']
   assert_login : ['xpath','//li[1]/a[@target="_self"]']
-MainPage:
+MainPage: #商城页
   shopping : ['class name','shopbtn']#进入商成
   shopcart : ['xpath','//*[@class="my-cart right"]']#进入购物车
   shop : ['xpath','//*[@title="{}"]']#选择商品
-  buynow : ['xpath','//*[@class="buy-direct c-pointer"]']#立即购买
+  cxtadd : ['xpath','//div[{}]/div[1]/div[2]/a'] #更多2是财新通，3是财新数据通，4是财新英文通，5是杂志周刊，6是财新图书
+shoplistPage:
+  shu : ['xpath','//*[@class="el-input__inner"]']#页数输入框最后要\n
+  shop : ['xpath','//*[@title="{}"]']#选择商品
+shopPage: #商品页
+  plus: [ 'id','spp-count-plus' ]#商品数量+1
+  minus: [ 'id','spp-count-minus' ]#商品数量-1
+  rmb: [ 'xpath','//*[@value="人民币支付"]' ]#用人民币支付
+  dollar: [ 'xpath','//*[@value="美元支付"]' ]#用美元支付
   add_shopcart : ['xpath','//*[@class="add-cart c-pointer"]']#加入购物车
-  clear_none_shopcart : ['id','ic-clear-cart']#清除失效商品
-  settlement : ['id','ic-go-check-trigger']#结算
-  all_shopcart : ['id','check-all-bellow']#全选购物车内容
-  clear_shopcart : ['id','ic-delete-by-ids']#删除购物车内容
-  shop_main : ['xpath' , "//*[text()='首页']"]#购物车内点首页
-  plus : ['id','spp-count-plus']#商品数量+1
-  minus : ['id','spp-count-minus']#商品数量-1
-  car_plus : ['xpath', '//*[@class="left scltc-add"]']#购物车+1
-  car_minus : ['xpath' , '//*[@class="left scltc-sub"]']#购物车-1
+  buynow : ['xpath','//*[@class="buy-direct c-pointer"]']#立即购买
+  shopcart : ['xpath','//*[@class="my-cart right"]']#进入购物车
+shopcarPage: #购物车页
+  clear_none_shopcart: [ 'id','ic-clear-cart' ]#清除失效商品
+  settlement: [ 'id','ic-go-check-trigger' ]#结算
+  all_shopcart: [ 'id','check-all-bellow' ]#全选购物车内容
+  clear_shopcart: [ 'id','ic-delete-by-ids' ]#删除购物车内容
+  shop_main: [ 'xpath' , "//*[text()='首页']" ]#购物车内点首页
+  car_plus: [ 'xpath', '//*[@class="left scltc-add"]' ]#购物车+1
+  car_shu: [ 'xpath', '//*[@class="left scltc-num"]' ]#购物车数量
+  car_minus: [ 'xpath' , '//*[@class="left scltc-sub"]' ]#购物车-1
   submits : ['id','so-summit'] #提交订单
-  shop_name : ['class name','bluefont'] #提交订单后商品名称
-  rmb : ['xpath','//*[@value="人民币支付"]']#用人民币支付
-  dollar : ['xpath','//*[@value="美元支付"]']#用人民币支付
-  dizhi : ['xpath','//*[@class="left so-new-address-add"]']#使用新地址
-  sheng : ['xpath','//*[text()="{}"]']#省级
-delorders :
+ordersPage: #订单页
+  shopcar : ['xpath','//*[@class="class="right so-back-to-cart c-pointer"]'] #返回购物车
+  xz_dress : ['xpath','//*[@class="clearfix so-address-list"]/li[{}]']#选择收获地址
+  address : [ 'xpath','//*[@class="left so-new-address-add"]' ]#使用新地址
+  submits : ['id','so-summit'] #提交订单
+addressPage: #地址页
+    sheng : [ 'xpath',"//select[@name='province3']"]#省级修改地址
+    shi : [ 'xpath',"//select[@name='city3']"]#市级修改地址
+    xian : [ 'xpath',"//select[@name='area3']"]#县级修改地址
+    cun : [ 'xpath',"//select[@name='district']"]#村级修改地址
+    name : ['id','so-san-consignee'] #收货人名字
+    phone : ['id','san-mobile'] #手机号码
+    youbian : ['xpath', '//*[@placeholder="请输入邮政编码"]']#邮编
+    saveaddress : ['id','san-item-save'] # 保存新地址
+delordersPage: #关闭订单页
   order : ['xpath' , "//*[text()='我的订单']"]#点击我的订单
   del_order : ['xpath','//*[@class="sahs-inner close-order"]']#关闭订单
   del_l : ['class name','delete-order']#删除按钮
+payPage: #支付页
+  shop_name : ['class name','bluefont' ] #提交订单后商品名称
+  shop_money : ['class name','raduis']# 提交后的金额
